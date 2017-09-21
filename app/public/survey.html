@@ -23,6 +23,7 @@
         <hr></hr>
 
         <h3>About You</h3>
+        <br>
 
         <form>
           <div class="form-group">
@@ -42,7 +43,7 @@
               <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
             </label>
             <select data-placeholder class="form-control" id="question-1">
-              <option value>Select an Option</option>
+              <option value="" selected disabled>Select an Option</option>
               <option value="1">1 (Strongly Disagree)</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -56,7 +57,7 @@
               <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
             </label>
             <select data-placeholder class="form-control" id="question-2">
-              <option value>Select an Option</option>
+              <option value="" selected disabled>Select an Option</option>
               <option value="1">1 (Strongly Disagree)</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -70,7 +71,7 @@
               <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
             </label>
             <select data-placeholder class="form-control" id="question-3">
-              <option value>Select an Option</option>
+              <option value="" selected disabled>Select an Option</option>
               <option value="1">1 (Strongly Disagree)</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -84,7 +85,7 @@
               <h4>You rarely do something just out of sheer curiosity.</h4>
             </label>
             <select data-placeholder class="form-control" id="question-4">
-              <option value>Select an Option</option>
+              <option value="" selected disabled>Select an Option</option>
               <option value="1">1 (Strongly Disagree)</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -98,7 +99,7 @@
               <h4>People can rarely upset you.</h4>
             </label>
             <select data-placeholder class="form-control" id="question-5">
-              <option value>Select an Option</option>
+              <option value="" selected disabled>Select an Option</option>
               <option value="1">1 (Strongly Disagree)</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -112,7 +113,7 @@
               <h4>It is often difficult for you to relate to other people’s feelings.</h4>
             </label>
             <select data-placeholder class="form-control" id="question-6">
-              <option value>Select an Option</option>
+              <option value="" selected disabled>Select an Option</option>
               <option value="1">1 (Strongly Disagree)</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -126,7 +127,7 @@
               <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
             </label>
             <select data-placeholder class="form-control" id="question-7">
-              <option value>Select an Option</option>
+              <option value="" selected disabled>Select an Option</option>
               <option value="1">1 (Strongly Disagree)</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -140,7 +141,7 @@
               <h4>You rarely get carried away by fantasies and ideas.</h4>
             </label>
             <select data-placeholder class="form-control" id="question-8">
-              <option value>Select an Option</option>
+              <option value="" selected disabled>Select an Option</option>
               <option value="1">1 (Strongly Disagree)</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -154,7 +155,7 @@
               <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
             </label>
             <select data-placeholder class="form-control" id="question-9">
-              <option value>Select an Option</option>
+              <option value="" selected disabled>Select an Option</option>
               <option value="1">1 (Strongly Disagree)</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -168,7 +169,7 @@
               <h4>You feel more energetic after spending time with a group of people.</h4>
             </label>
             <select data-placeholder class="form-control" id="question-10">
-              <option value>Select an Option</option>
+              <option value="" selected disabled>Select an Option</option>
               <option value="1">1 (Strongly Disagree)</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -176,13 +177,43 @@
               <option value="5">5 (Strongly Agree)</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
         </form>
         <hr></hr>
         
       </div>
     </div>
   </div>
+
+<script type="text/javascript">
+
+  $('#submit').on('click', function() {
+    event.preventDefault();
+
+    var userName = $('#name').val();
+    var userPhoto = $('#photo').val();
+    var q1 = parseInt($('#question-1').val());
+    var q2 = parseInt($('#question-2').val());
+    var q3 = parseInt($('#question-3').val());
+    var q4 = parseInt($('#question-4').val());
+    var q5 = parseInt($('#question-5').val());
+    var q6 = parseInt($('#question-6').val());
+    var q7 = parseInt($('#question-7').val());
+    var q8 = parseInt($('#question-8').val());
+    var q9 = parseInt($('#question-9').val());
+    var q10 = parseInt($('#question-10').val());
+       
+    var newUser = {
+      "name": userName,
+      "photo": userPhoto,
+       "scores":[ q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
+    };
+
+    console.log(newUser);
+  });
+    
+
+</script>
 </body>
 </html>
   
