@@ -10,19 +10,27 @@
     <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--  Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css"></style>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Playfair+Display:400,700" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <div class="jumbotron">
-        <h1><span class="glyphicon glyphicon-heart"></span> Friend Finder</h1>
-        <h3>Answer a few basic questions.</h3>
-        <h3>Then find the friend with the greatest compatibility!</h3>
+  <div class="container text-center">
+    <div id="content">
+      <h1>Friend Finder</h1>
 
-        <hr class="my-4">
-        <p class="lead">
-          <a href="/survey"><button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-list-alt"></span> Start Survey</button></a>
-        </p>
+      <h4>Answer a few questions to find a friend with the greatest compatibility.</h4>
+
+      <a href="/survey" id="survey-btn">Start Survey</a>
     </div>
-  </div>
+  </div>  
+  
+  <div id="top"></div>
+  <div id="bottom"></div>
+  <div id="left"></div>
+  <div id="right"></div>
+
 </body>
 </html>

@@ -1,0 +1,81 @@
+/*body { 
+  background: url("friends2.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+
+h1 {
+  margin-top: 60px;
+  color: #000 !important;
+  font-size: 50px;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h4 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+label[for='name'],
+label[for='photo']
+{
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+h5 {
+  font-family: 'Open Sans', sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #EA4B41;
+}
+
+#submit {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: 'Open Sans', sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border: 2px solid #EA4B41;
+  text-decoration: none;
+  color: #EA4B41;
+}
+
+/* border */
+#top,
+#bottom,
+#left,
+#right {
+  background: #EA4B41;
+  position: fixed;
+}
+
+#left,
+#right {
+  top: 0; bottom: 0;
+  width: 10px;
+}
+  #left { left: 0; }
+  #right { right: 0; }
+
+#top,
+#bottom {
+  left: 0; right: 0;
+  height: 10px;
+}
+  #top { top: 0; }
+  #bottom { bottom: 0; }
