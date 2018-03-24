@@ -15,6 +15,10 @@
     <link rel="stylesheet" type="text/css" href="/static/survey.css"></style>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Playfair+Display:400,700" rel="stylesheet">
+
+    <!-- Chosen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -40,7 +44,7 @@
               <h5>Question 1</h5>
               <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
             </label>
-            <select data-placeholder class="form-control" id="question-1">
+            <select data-placeholder="" class="form-control" id="question-1">
               <option value="" selected disabled>Select an Option</option>
               <option value="1">1 (Strongly Disagree)</option>
               <option value="2">2</option>
@@ -182,37 +186,63 @@
     </div>
   </div>
 
-  <!-- Borders -->
-  <div id="top"></div>
-  <div id="bottom"></div>
-  <div id="left"></div>
-  <div id="right"></div>
+<!-- Borders -->
+<div id="top"></div>
+<div id="bottom"></div>
+<div id="left"></div>
+<div id="right"></div>
+
+<!-- Modal -->
+<div id="resultsModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content text-center">
+      <div class="modal-header">
+        <p class="modal-title">Your Best Match</p>
+      </div>
+      <div class="modal-body">
+        <h2 id="matchName"></h2>
+        <img id="matchImg" src="http://cdn3-www.craveonline.com/assets/mandatory/legacy/2015/06/man_file_1059336_6PeterGriffin.png" alt="">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <script type="text/javascript">
   $('#submit').on('click', function() {
     event.preventDefault();
-
-    var userName = $('#name').val();
-    var userPhoto = $('#photo').val();
-    var q1 = parseInt($('#question-1').val());
-    var q2 = parseInt($('#question-2').val());
-    var q3 = parseInt($('#question-3').val());
-    var q4 = parseInt($('#question-4').val());
-    var q5 = parseInt($('#question-5').val());
-    var q6 = parseInt($('#question-6').val());
-    var q7 = parseInt($('#question-7').val());
-    var q8 = parseInt($('#question-8').val());
-    var q9 = parseInt($('#question-9').val());
-    var q10 = parseInt($('#question-10').val());
-       
-    var newUser = {
-      "name": userName,
-      "photo": userPhoto,
-       "scores":[ q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
+    var userData = {
+      name: $("#name").val(),
+      photo: $("#photo").val(),
+      scores: [
+        $('#question-1').val(),
+        $('#question-2').val(),
+        $('#question-3').val(),
+        $('#question-4').val(),
+        $('#question-5').val(),
+        $('#question-6').val(),
+        $('#question-7').val(),
+        $('#question-8').val(),
+        $('#question-9').val(),
+        $('#question-10').val(),
+      ]
     };
 
-    console.log(newUser);
+    console.log(userData);
+
+    var currentURL = window.location.origin;
+    console.log(currentURL);
+
+    $.post(currentURL + "/api/friends", userData, function(data) {
+      $("#matchName").text(data.name);
+      $("#matchImg").attr("src", data.photo);
+      $('#resultsModal').modal("toggle");
+      
+    });
   });
 </script>
 </body>

@@ -1,5 +1,5 @@
 body { 
-  background: url("friends2.jpg") no-repeat center center fixed; 
+  background: url("friend.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -35,6 +35,11 @@ h4 {
   border: 2px solid #EA4B41;
   text-decoration: none;
   color: #EA4B41;
+}
+
+#survey-btn:hover {
+  background-color: #EA4B41;
+  color: #FFF;
 }
 
 /* border */

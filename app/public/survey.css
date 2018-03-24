@@ -38,6 +38,25 @@ h5 {
   color: #EA4B41;
 }
 
+.modal-title {
+  font-family: 'Open Sans', sans-serif !important;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #EA4B41;
+}
+
+#matchName {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+#matchImg {
+  width: 300px;
+}
+
 #submit {
   margin-top: 20px;
   margin-bottom: 60px;
