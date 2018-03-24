@@ -16,6 +16,6 @@
 - path NPM Package 
 
 <br/>
-<img width="1593" alt="17" src="https://user-images.githubusercontent.com/28972721/37862898-e27ea2cc-2f11-11e8-8dbe-cb14e546972b.png">
-<img width="1592" alt="18" src="https://user-images.githubusercontent.com/28972721/37862899-e524dd3e-2f11-11e8-97c2-ad30f6086b61.png">
-<img width="1592" alt="19" src="https://user-images.githubusercontent.com/28972721/37862901-e712458c-2f11-11e8-92a9-d8a008e01882.png">
+<img width="600" alt="17" src="https://user-images.githubusercontent.com/28972721/37862898-e27ea2cc-2f11-11e8-8dbe-cb14e546972b.png">
+<img width="600" alt="18" src="https://user-images.githubusercontent.com/28972721/37862899-e524dd3e-2f11-11e8-97c2-ad30f6086b61.png">
+<img width="600" alt="19" src="https://user-images.githubusercontent.com/28972721/37862901-e712458c-2f11-11e8-92a9-d8a008e01882.png">
